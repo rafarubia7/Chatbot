@@ -1,0 +1,56 @@
+{
+    "manhã": {
+        "quarta": [
+            {
+                "disciplina": "TSOFT",
+                "professor": "Paulo Car",
+                "sala": "321"
+            },
+            {
+                "disciplina": "PPDM",
+                "professor": "Paulo Car",
+                "sala": "321"
+            }
+        ],
+        "sexta": [
+            {
+                "disciplina": "ITCOI",
+                "professor": "Fabiana",
+                "sala": "322"
+            },
+            {
+                "disciplina": "ITCOI",
+                "professor": "Fabiana",
+                "sala": "322"
+            }
+        ]
+    },
+    "tarde": {
+        "quarta": [
+            {
+                "disciplina": "PSOF2",
+                "professor": "Wesley",
+                "sala": "324"
+            },
+            {
+                "disciplina": "PPDM",
+                "professor": "Wesley",
+                "sala": "324"
+            }
+        ],
+        "sexta": [
+            {
+                "disciplina": "PEND",
+                "professor": "Wesley",
+                "sala": "324"
+            },
+            {
+                "disciplina": "PEND",
+                "professor": "Wesley",
+                "sala": "324"
+            }
+        ]
+    },
+    "noite": {}
+}
+

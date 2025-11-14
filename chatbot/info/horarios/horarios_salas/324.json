@@ -1,0 +1,256 @@
+{
+    "_metadata": {
+        "tipo": "horario_sala",
+        "sala": "324",
+        "descricao": "Horário completo da sala 324 com todas as aulas, professores e turmas por dia da semana e período",
+        "periodos": [
+            "manhã",
+            "tarde",
+            "noite"
+        ],
+        "dias_semana": [
+            "segunda",
+            "terça",
+            "quarta",
+            "quinta",
+            "sexta",
+            "sábado"
+        ]
+    },
+    "_instrucoes": {
+        "uso": "Este arquivo contém o horário completo da sala 324. Use para responder perguntas como: 'quem vai dar aula na sala 324 hoje?', 'qual professor está na sala 324?', 'a sala 324 está ocupada?'",
+        "estrutura": "Os horários estão organizados por período (manhã/tarde/noite) e depois por dia da semana. Cada aula contém: disciplina (nome da matéria), professor (nome do professor) e turma (nome da turma quando disponível)"
+    },
+    "manhã": {
+        "_descricao": "Aulas do período da manhã (geralmente das 7h30 às 12h)",
+        "segunda": [
+            {
+                "disciplina": "1IDS-SC_B",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 1IDS-SC_B, com o professor Wesley na sala 324 na segunda-feira no período da manhã"
+            },
+            {
+                "disciplina": "1IDS-SC_B",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 1IDS-SC_B, com o professor Wesley na sala 324 na segunda-feira no período da manhã (aula 2 do dia)"
+            }
+        ],
+        "terça": [],
+        "quarta": [],
+        "quinta": [
+            {
+                "disciplina": "PSOF2",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de PSOF2, com o professor Wesley na sala 324 na quinta-feira no período da manhã"
+            }
+        ],
+        "sexta": [
+            {
+                "disciplina": "2IDS-SC_B",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 2IDS-SC_B, com o professor Wesley na sala 324 na sexta-feira no período da manhã"
+            },
+            {
+                "disciplina": "2IDS-SC_B",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 2IDS-SC_B, com o professor Wesley na sala 324 na sexta-feira no período da manhã (aula 2 do dia)"
+            },
+            {
+                "disciplina": "PPDM",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de PPDM, com o professor Wesley na sala 324 na sexta-feira no período da manhã (aula 3 do dia)"
+            }
+        ],
+        "sábado": []
+    },
+    "tarde": {
+        "_descricao": "Aulas do período da tarde (geralmente das 13h30 às 18h)",
+        "segunda": [
+            {
+                "disciplina": "1IDS-SC_A",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 1IDS-SC_A, com o professor Wesley na sala 324 na segunda-feira no período da tarde"
+            },
+            {
+                "disciplina": "1IDS-SC_A",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 1IDS-SC_A, com o professor Wesley na sala 324 na segunda-feira no período da tarde (aula 2 do dia)"
+            }
+        ],
+        "terça": [
+            {
+                "disciplina": "PSOF1",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de PSOF1, com o professor Wesley na sala 324 na terça-feira no período da tarde"
+            },
+            {
+                "disciplina": "1IDS-B-SEDUC",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 1IDS-B-SEDUC, com o professor Wesley na sala 324 na terça-feira no período da tarde (aula 2 do dia)"
+            },
+            {
+                "disciplina": "1IDS-B-SEDUC",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 1IDS-B-SEDUC, com o professor Wesley na sala 324 na terça-feira no período da tarde (aula 3 do dia)"
+            },
+            {
+                "disciplina": "PBE1",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de PBE1, com o professor Wesley na sala 324 na terça-feira no período da tarde (aula 4 do dia)"
+            }
+        ],
+        "quarta": [
+            {
+                "disciplina": "PSOF2",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de PSOF2, com o professor Wesley na sala 324 na quarta-feira no período da tarde"
+            },
+            {
+                "disciplina": "2IDS-SC_A",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 2IDS-SC_A, com o professor Wesley na sala 324 na quarta-feira no período da tarde (aula 2 do dia)"
+            },
+            {
+                "disciplina": "2IDS-SC_A",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 2IDS-SC_A, com o professor Wesley na sala 324 na quarta-feira no período da tarde (aula 3 do dia)"
+            },
+            {
+                "disciplina": "PPDM",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de PPDM, com o professor Wesley na sala 324 na quarta-feira no período da tarde (aula 4 do dia)"
+            }
+        ],
+        "quinta": [
+            {
+                "disciplina": "PSOF1",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de PSOF1, com o professor Wesley na sala 324 na quinta-feira no período da tarde"
+            },
+            {
+                "disciplina": "1IDS-A-SEDUC",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 1IDS-A-SEDUC, com o professor Wesley na sala 324 na quinta-feira no período da tarde (aula 2 do dia)"
+            },
+            {
+                "disciplina": "1IDS-A-SEDUC",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 1IDS-A-SEDUC, com o professor Wesley na sala 324 na quinta-feira no período da tarde (aula 3 do dia)"
+            },
+            {
+                "disciplina": "PBE1",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de PBE1, com o professor Wesley na sala 324 na quinta-feira no período da tarde (aula 4 do dia)"
+            }
+        ],
+        "sexta": [
+            {
+                "disciplina": "PEND",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de PEND, com o professor Wesley na sala 324 na sexta-feira no período da tarde - disciplina ainda não definida"
+            },
+            {
+                "disciplina": "2IDS-SC_A",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 2IDS-SC_A, com o professor Wesley na sala 324 na sexta-feira no período da tarde (aula 2 do dia)"
+            },
+            {
+                "disciplina": "2IDS-SC_A",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de 2IDS-SC_A, com o professor Wesley na sala 324 na sexta-feira no período da tarde (aula 3 do dia)"
+            },
+            {
+                "disciplina": "PEND",
+                "professor": "Wesley",
+                "sala": "324",
+                "_info": "Aula de PEND, com o professor Wesley na sala 324 na sexta-feira no período da tarde (aula 4 do dia) - disciplina ainda não definida"
+            }
+        ],
+        "sábado": []
+    },
+    "noite": {
+        "_descricao": "Aulas do período da noite (geralmente das 19h às 22h30)",
+        "segunda": [
+            {
+                "disciplina": "DBACK",
+                "professor": "André R",
+                "sala": "324",
+                "_info": "Aula de DBACK, com o professor André R na sala 324 na segunda-feira no período da noite"
+            }
+        ],
+        "terça": [
+            {
+                "disciplina": "ENSOF",
+                "professor": "Maurício",
+                "sala": "324",
+                "_info": "Aula de ENSOF, com o professor Maurício na sala 324 na terça-feira no período da noite"
+            },
+            {
+                "disciplina": "CST ADS-2A/CST ADS-2B",
+                "professor": "Maurício",
+                "sala": "324",
+                "_info": "Aula de CST ADS-2A/CST ADS-2B, com o professor Maurício na sala 324 na terça-feira no período da noite (aula 2 do dia)"
+            }
+        ],
+        "quarta": [
+            {
+                "disciplina": "IADAT",
+                "professor": "Adriano",
+                "sala": "324",
+                "_info": "Aula de IADAT, com o professor Adriano na sala 324 na quarta-feira no período da noite"
+            },
+            {
+                "disciplina": "CST ADS-2A",
+                "professor": "Adriano",
+                "sala": "324",
+                "_info": "Aula de CST ADS-2A, com o professor Adriano na sala 324 na quarta-feira no período da noite (aula 2 do dia)"
+            }
+        ],
+        "quinta": [
+            {
+                "disciplina": "DBACK",
+                "professor": "André R",
+                "sala": "324",
+                "_info": "Aula de DBACK, com o professor André R na sala 324 na quinta-feira no período da noite"
+            }
+        ],
+        "sexta": [
+            {
+                "disciplina": "IADAT",
+                "professor": "Adriano",
+                "sala": "324",
+                "_info": "Aula de IADAT, com o professor Adriano na sala 324 na sexta-feira no período da noite"
+            },
+            {
+                "disciplina": "CST ADS-2B",
+                "professor": "Adriano",
+                "sala": "324",
+                "_info": "Aula de CST ADS-2B, com o professor Adriano na sala 324 na sexta-feira no período da noite (aula 2 do dia)"
+            }
+        ],
+        "sábado": []
+    }
+}
