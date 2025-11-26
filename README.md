@@ -277,5 +277,7 @@ Para mais informações sobre o SENAI São Carlos:
 ## LinkedIn
 [rafa_rubia7](https://www.linkedin.com/in/rafa_rubia7)
 
+---
+
 Desenvolvido para o SENAI São Carlos
 
