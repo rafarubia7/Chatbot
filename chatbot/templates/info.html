@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informações - Chatbot SenAI</title>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            background: rgba(26, 26, 46, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-shadow: 0 0 30px rgba(106, 17, 203, 0.5);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow {
+            from { text-shadow: 0 0 30px rgba(106, 17, 203, 0.5); }
+            to { text-shadow: 0 0 50px rgba(106, 17, 203, 0.8), 0 0 80px rgba(106, 17, 203, 0.3); }
+        }
+        
+        .header-buttons {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .btn-header {
+            --c1: #212121;
+            --c2: #ffffff;
+            --size-letter: 14px;
+            width: 131px;
+            height: 51px;
+            padding: 0.5em 1em;
+            font-size: var(--size-letter);
+            background-color: transparent;
+            border: calc(var(--size-letter) / 6) solid var(--c2);
+            border-radius: 25px;
+            cursor: pointer;
+            overflow: hidden;
+            position: relative;
+            transition: 300ms cubic-bezier(0.83, 0, 0.17, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .btn-header > .text {
+            font-weight: 700;
+            color: var(--c2);
+            position: relative;
+            z-index: 1;
+            transition: color 700ms cubic-bezier(0.83, 0, 0.17, 1);
+        }
+
+        .btn-header::before,
+        .btn-header::after {
+            content: "";
+            width: 150%;
+            aspect-ratio: 1/1;
+            scale: 0;
+            transition: 1000ms cubic-bezier(0.76, 0, 0.24, 1);
+            background-color: var(--c2);
+            border-radius: 50%;
+            position: absolute;
+            translate: -50% -50%;
+        }
+
+        .btn-header::before {
+            top: 0;
+            left: 0;
+        }
+
+        .btn-header::after {
+            top: 100%;
+            left: 100%;
+        }
+
+        .btn-header:hover > .text {
+            color: var(--c1);
+        }
+
+        .btn-header:hover::before,
+        .btn-header:hover::after {
+            scale: 1;
+        }
+
+        .btn-header:active {
+            scale: 0.98;
+            filter: brightness(0.9);
+        }
+
+        .btn-criar-conta {
+            --c2: #6a11cb;
+        }
+
+        .btn-criar-conta > .text {
+            color: var(--c2);
+        }
+
+        .btn-criar-conta:hover > .text {
+            color: #ffffff;
+        }
+
+        .btn-criar-conta::before,
+        .btn-criar-conta::after {
+            background-color: var(--c2);
+        }
+
+        .btn-visitante {
+            --c2: #2575fc;
+        }
+
+        .btn-visitante > .text {
+            color: var(--c2);
+        }
+
+        .btn-visitante:hover > .text {
+            color: #ffffff;
+        }
+
+        .btn-visitante::before,
+        .btn-visitante::after {
+            background-color: var(--c2);
+        }
+        
+        .btn-header {
+            width: auto;
+            min-width: 120px;
+            position: relative;
+        }
+        
+        /* Tooltip para botões */
+        .btn-tooltip {
+            position: absolute;
+            bottom: calc(100% + 10px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.95);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease, transform 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 250px;
+            white-space: normal;
+            text-align: center;
+            line-height: 1.4;
+        }
+        
+        .btn-tooltip::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid rgba(0, 0, 0, 0.95);
+        }
+        
+        .btn-header:hover .btn-tooltip {
+            opacity: 1;
+            transform: translateX(-50%) translateY(-5px);
+            pointer-events: auto;
+        }
+        
+        /* Conteúdo principal */
+        .main-content {
+            padding: 120px 40px 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .page-title {
+            font-size: 48px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .info-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(106, 17, 203, 0.3);
+            border-color: rgba(106, 17, 203, 0.5);
+        }
+        
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #6a11cb;
+        }
+        
+        .card-content {
+            font-size: 16px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .feature-list {
+            list-style: none;
+            margin-top: 15px;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #6a11cb;
+            font-weight: bold;
+        }
+        
+        .tech-section {
+            background: rgba(106, 17, 203, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .tech-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            background: rgba(106, 17, 203, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .tech-name {
+            font-weight: bold;
+            color: #6a11cb;
+            margin-bottom: 5px;
+        }
+        
+        .tech-description {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 40px;
+            background: rgba(106, 17, 203, 0.1);
+            border-radius: 15px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 12px 25px;
+            background: transparent;
+            color: #e5e0ea;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 2px solid #6a11cb;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+        
+        .cta-button:hover {
+            background: rgba(106, 17, 203, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .cta-button:active {
+            transform: translateY(0);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .header {
+                padding: 12px 15px;
+                flex-wrap: wrap;
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            
+            .logo {
+                font-size: 18px;
+                width: 100%;
+                margin-bottom: 8px;
+                text-align: center;
+            }
+            
+            .header-buttons {
+                width: 100%;
+                justify-content: center;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
+            
+            .btn-header {
+                padding: 10px 12px;
+                font-size: 10px;
+                min-width: 90px;
+                height: 44px;
+                flex: 1;
+                max-width: 140px;
+            }
+            
+            .btn-tooltip {
+                font-size: 10px;
+                padding: 6px 10px;
+                max-width: 180px;
+                bottom: calc(100% + 6px);
+                display: none; /* Ocultar tooltips em mobile */
+            }
+            
+            .main-content {
+                padding: 100px 20px 20px;
+            }
+            
+            .page-title {
+                font-size: 32px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .tech-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            }
+            
+            .cta-button {
+                display: block;
+                width: 100%;
+                max-width: 280px;
+                margin: 10px auto;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header {
+                padding: 10px 12px;
+            }
+            
+            .logo {
+                font-size: 16px;
+                margin-bottom: 6px;
+            }
+            
+            .header-buttons {
+                gap: 6px;
+            }
+            
+            .btn-header {
+                padding: 8px 10px;
+                font-size: 9px;
+                min-width: 80px;
+                height: 40px;
+                max-width: 120px;
+            }
+            
+            .btn-tooltip {
+                display: none; /* Ocultar tooltips em telas muito pequenas */
+            }
+            
+            .main-content {
+                padding-top: 90px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            .page-title {
+                font-size: 26px;
+            }
+            
+            .info-card {
+                padding: 18px;
+            }
+            
+            .card-title {
+                font-size: 18px;
+            }
+            
+            .card-content {
+                font-size: 14px;
+            }
+            
+            .cta-button {
+                padding: 14px 20px;
+                font-size: 14px;
+                max-width: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">SENAI</div>
+        <div class="header-buttons">
+            <a href="{{ url_for('login') }}" class="btn-header">
+                <span class="text">ENTRAR</span>
+                <span class="btn-tooltip">Acesse sua conta para salvar conversas e gerenciar seu perfil</span>
+            </a>
+            <a href="{{ url_for('register') }}" class="btn-header btn-criar-conta">
+                <span class="text">CRIAR CONTA</span>
+                <span class="btn-tooltip">Cadastre-se gratuitamente para ter acesso completo ao sistema</span>
+            </a>
+            <a href="{{ url_for('chat_page') }}" class="btn-header btn-visitante">
+                <span class="text">ENTRAR SEM LOGIN</span>
+                <span class="btn-tooltip">Use o chat imediatamente sem precisar criar uma conta</span>
+            </a>
+        </div>
+    </header>
+    
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <h1 class="page-title">Informações da Aplicação</h1>
+        
+        <div class="info-grid">
+            <div class="info-card">
+                <h3 class="card-title">Sobre o Projeto</h3>
+                <div class="card-content">
+                    <p>O <strong>Cadu</strong> é um assistente virtual desenvolvido para auxiliar alunos, funcionários e visitantes do SENAI São Carlos com informações institucionais.</p>
+                    <p>O sistema utiliza integração com <strong>LM Studio</strong> para processamento de linguagem natural e oferece uma interface web moderna e intuitiva.</p>
+                    <p>Desenvolvido especificamente para a <strong>Escola SENAI São Carlos – "Antonio A. Lobbe"</strong>, o chatbot fornece informações precisas sobre cursos, horários, funcionários, salas e processos administrativos.</p>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <h3 class="card-title">Funcionalidades Principais</h3>
+                <div class="card-content">
+                    <ul class="feature-list">
+                        <li>Chat inteligente com processamento de linguagem natural via LM Studio</li>
+                        <li>Informações sobre cursos técnicos, superiores e de aprendizagem</li>
+                        <li>Consulta de horários de professores, salas e turmas</li>
+                        <li>Informações sobre funcionários e setores</li>
+                        <li>Processos de inscrição e matrícula</li>
+                        <li>Localização de salas e instalações</li>
+                        <li>Sistema de autenticação com login e registro</li>
+                        <li>Acesso sem login (modo visitante)</li>
+                        <li>Histórico de conversas salvo por usuário</li>
+                        <li>Gerenciamento de múltiplas conversas</li>
+                        <li>Perfil de usuário com upload de avatar</li>
+                        <li>Copiar e editar mensagens</li>
+                        <li>Interromper geração de respostas</li>
+                        <li>Reconhecimento de voz (Web Speech API)</li>
+                        <li>Sistema de cache inteligente</li>
+                        <li>Interface responsiva e moderna</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <h3 class="card-title">Arquitetura do Sistema</h3>
+                <div class="card-content">
+                    <p><strong>Backend:</strong> Flask 3.0.2 (Python) com SQLAlchemy ORM</p>
+                    <p><strong>Frontend:</strong> HTML5, CSS3 e JavaScript (Vanilla JS)</p>
+                    <p><strong>IA:</strong> LM Studio com modelos de linguagem local (Llama 3.2 3B Instruct)</p>
+                    <p><strong>Banco de Dados:</strong> MySQL com suporte a usuários anônimos</p>
+                    <p><strong>Cache:</strong> Sistema de cache JSON para otimização de respostas</p>
+                    <p><strong>Busca:</strong> FuzzyWuzzy para correspondência de texto inteligente</p>
+                    <p><strong>Autenticação:</strong> Sistema de sessões Flask com suporte a usuários anônimos</p>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <h3 class="card-title">Recursos de IA e Processamento</h3>
+                <div class="card-content">
+                    <ul class="feature-list">
+                        <li>Processamento de linguagem natural via LM Studio</li>
+                        <li>Respostas contextuais baseadas em histórico de conversa</li>
+                        <li>Detecção de mensagens sem sentido (gibberish)</li>
+                        <li>Busca fuzzy (FuzzyWuzzy) para correspondência de texto</li>
+                        <li>Análise de intenção e classificação de escopo</li>
+                        <li>Detecção de small talk (cumprimentos, despedidas)</li>
+                        <li>Processamento especializado para horários e localizações</li>
+                        <li>Personalização de respostas com nome do usuário</li>
+                        <li>Sistema de cache para respostas frequentes</li>
+                        <li>Fallback inteligente quando LM Studio não está disponível</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <h3 class="card-title">Segurança e Privacidade</h3>
+                <div class="card-content">
+                    <ul class="feature-list">
+                        <li>Sistema de autenticação com sessões Flask</li>
+                        <li>Isolamento de dados por usuário (chats privados)</li>
+                        <li>Suporte a usuários anônimos com sessões temporárias</li>
+                        <li>Validação de dados com SQLAlchemy ORM</li>
+                        <li>Proteção contra injeção SQL (ORM)</li>
+                        <li>Sanitização de HTML nas mensagens</li>
+                        <li>Gerenciamento seguro de senhas</li>
+                        <li>Chaves estrangeiras com CASCADE para integridade</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="info-card">
+                <h3 class="card-title">Base de Conhecimento</h3>
+                <div class="card-content">
+                    <p>O chatbot possui uma extensa base de conhecimento estruturada sobre o SENAI São Carlos:</p>
+                    <ul class="feature-list">
+                        <li><strong>Cursos:</strong> Técnicos, Superiores, Aprendizagem Industrial e Qualificação</li>
+                        <li><strong>Horários:</strong> Professores, salas e turmas (dados em JSON estruturado)</li>
+                        <li><strong>Funcionários:</strong> Informações sobre setores e equipe</li>
+                        <li><strong>Localização:</strong> Salas, laboratórios, biblioteca, refeitório e outras instalações</li>
+                        <li><strong>Processos:</strong> Inscrição, matrícula e processos administrativos</li>
+                        <li><strong>Institucional:</strong> Empresas parceiras, eventos e diferenciais</li>
+                        <li><strong>Perguntas Frequentes:</strong> Bolsas, certificados, estágios e transferências</li>
+                        <li><strong>Contatos:</strong> Telefones, emails e horários de funcionamento</li>
+                        <li><strong>Informações Adicionais:</strong> Áreas de atuação, redes sociais e serviços</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tech-section">
+            <h3 class="card-title">Tecnologias Utilizadas</h3>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <div class="tech-name">Flask 3.0.2</div>
+                    <div class="tech-description">Framework web Python</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">SQLAlchemy</div>
+                    <div class="tech-description">ORM para banco de dados</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">MySQL</div>
+                    <div class="tech-description">Banco de dados relacional</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">PyMySQL</div>
+                    <div class="tech-description">Driver MySQL para Python</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">LM Studio</div>
+                    <div class="tech-description">Modelos de linguagem local</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">FuzzyWuzzy</div>
+                    <div class="tech-description">Busca fuzzy de texto</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">Pydantic</div>
+                    <div class="tech-description">Validação de dados</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">python-dotenv</div>
+                    <div class="tech-description">Variáveis de ambiente</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">Flask-CORS</div>
+                    <div class="tech-description">Suporte a CORS</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">HTML5/CSS3</div>
+                    <div class="tech-description">Interface responsiva</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">JavaScript</div>
+                    <div class="tech-description">Interatividade frontend</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-name">Web Speech API</div>
+                    <div class="tech-description">Reconhecimento de voz</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h3 class="card-title">Pronto para Experimentar?</h3>
+            <p style="margin-bottom: 30px; font-size: 18px; color: rgba(255, 255, 255, 0.9);">
+                Conecte-se com o Cadu e descubra todas as informações sobre o SENAI São Carlos
+            </p>
+            <a href="{{ url_for('chat_page') }}" class="cta-button">INICIAR CONVERSA</a>
+            <a href="{{ url_for('index') }}" class="cta-button">VOLTAR AO INÍCIO</a>
+        </div>
+    </main>
+</body>
+</html>
