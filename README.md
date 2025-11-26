@@ -269,10 +269,10 @@ Para mais informações sobre o SENAI São Carlos:
 ---
 
 ## Deselvolvedores 
-- Lívia Maria Monteiro;
-- Julia Vitória Ferreira Stapavicci;
-- Kelvin Brito Negrini Alves;
-- Rafael Rubiá Oliveria Cardoso.
+- Lívia Maria Monteiro (Gestão de projeto);
+- Julia Vitória Ferreira Stapavicci (Documentação);
+- Kelvin Brito Negrini Alves (Front End);
+- Rafael Rubiá Oliveria Cardoso (Back End).
 
 ## LinkedIn
 [rafa_rubia7](https://www.linkedin.com/in/rafa_rubia7)
