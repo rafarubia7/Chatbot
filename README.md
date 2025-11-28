@@ -1,4 +1,4 @@
-# Chatbot SENAI São Carlos - Cadu
+# Chatbot SenAI - Cadu
 
 Chatbot inteligente desenvolvido para o SENAI São Carlos, utilizando processamento de linguagem natural para fornecer informações sobre cursos, horários, funcionários, salas e outros assuntos relacionados à instituição.
 
