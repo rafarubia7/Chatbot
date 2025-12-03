@@ -1,0 +1,146 @@
+{
+    "_metadata": {
+        "tipo": "horario_professor",
+        "professor": "Wesley",
+        "descricao": "Horário completo do professor Wesley com todas as aulas, turmas e salas por dia da semana e período",
+        "periodos": [
+            "manhã",
+            "tarde",
+            "noite"
+        ],
+        "dias_semana": [
+            "segunda",
+            "terça",
+            "quarta",
+            "quinta",
+            "sexta",
+            "sábado"
+        ]
+    },
+    "_instrucoes": {
+        "uso": "Este arquivo contém o horário completo do professor Wesley. Use para responder perguntas como: 'onde está o professor Wesley?', 'qual sala o professor Wesley está?', 'o professor Wesley está dando aula hoje?'",
+        "estrutura": "Os horários estão organizados por período (manhã/tarde/noite) e depois por dia da semana. Cada aula contém: disciplina (nome da matéria), turma (nome da turma) e sala (número da sala onde a aula acontece)"
+    },
+    "manhã": {
+        "_descricao": "Aulas do período da manhã (geralmente das 8h às 12h)",
+        "segunda": [
+            {
+                "disciplina": "LIMA",
+                "turma": "1IDS-SC_B",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de LIMA, para a turma 1IDS-SC_B, na sala 324 na segunda-feira no período da manhã"
+            },
+            {
+                "disciplina": "LIMA",
+                "turma": "1IDS-SC_B",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de LIMA, para a turma 1IDS-SC_B, na sala 324 na segunda-feira no período da manhã (aula 2 do dia)"
+            }
+        ],
+        "quarta": [
+            {
+                "disciplina": "PEND",
+                "turma": "2IDS-SC_B",
+                "sala": "315",
+                "_info": "Professor Wesley: Aula de PEND, para a turma 2IDS-SC_B, na sala 315 na quarta-feira no período da manhã - disciplina ainda não definida"
+            },
+            {
+                "disciplina": "PEND",
+                "turma": "2IDS-SC_B",
+                "sala": "315",
+                "_info": "Professor Wesley: Aula de PEND, para a turma 2IDS-SC_B, na sala 315 na quarta-feira no período da manhã (aula 2 do dia) - disciplina ainda não definida"
+            }
+        ],
+        "sexta": [
+            {
+                "disciplina": "PSOF2",
+                "turma": "2IDS-SC_B",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de PSOF2, para a turma 2IDS-SC_B, na sala 324 na sexta-feira no período da manhã"
+            },
+            {
+                "disciplina": "PPDM",
+                "turma": "2IDS-SC_B",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de PPDM, para a turma 2IDS-SC_B, na sala 324 na sexta-feira no período da manhã (aula 2 do dia)"
+            }
+        ]
+    },
+    "tarde": {
+        "_descricao": "Aulas do período da tarde (geralmente das 13h30 às 18h)",
+        "segunda": [
+            {
+                "disciplina": "LIMA",
+                "turma": "1IDS-SC_A",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de LIMA, para a turma 1IDS-SC_A, na sala 324 na segunda-feira no período da tarde"
+            },
+            {
+                "disciplina": "LIMA",
+                "turma": "1IDS-SC_A",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de LIMA, para a turma 1IDS-SC_A, na sala 324 na segunda-feira no período da tarde (aula 2 do dia)"
+            }
+        ],
+        "terça": [
+            {
+                "disciplina": "PSOF1",
+                "turma": "1IDS-B-SEDUC",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de PSOF1, para a turma 1IDS-B-SEDUC, na sala 324 na terça-feira no período da tarde"
+            },
+            {
+                "disciplina": "PBE1",
+                "turma": "1IDS-B-SEDUC",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de PBE1, para a turma 1IDS-B-SEDUC, na sala 324 na terça-feira no período da tarde (aula 2 do dia)"
+            }
+        ],
+        "quarta": [
+            {
+                "disciplina": "PSOF2",
+                "turma": "2IDS-SC_A",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de PSOF2, para a turma 2IDS-SC_A, na sala 324 na quarta-feira no período da tarde"
+            },
+            {
+                "disciplina": "PPDM",
+                "turma": "2IDS-SC_A",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de PPDM, para a turma 2IDS-SC_A, na sala 324 na quarta-feira no período da tarde (aula 2 do dia)"
+            }
+        ],
+        "quinta": [
+            {
+                "disciplina": "PSOF1",
+                "turma": "1IDS-A-SEDUC",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de PSOF1, para a turma 1IDS-A-SEDUC, na sala 324 na quinta-feira no período da tarde"
+            },
+            {
+                "disciplina": "PBE1",
+                "turma": "1IDS-A-SEDUC",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de PBE1, para a turma 1IDS-A-SEDUC, na sala 324 na quinta-feira no período da tarde (aula 2 do dia)"
+            }
+        ],
+        "sexta": [
+            {
+                "disciplina": "PEND",
+                "turma": "2IDS-SC_A",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de PEND, para a turma 2IDS-SC_A, na sala 324 na sexta-feira no período da tarde - disciplina ainda não definida"
+            },
+            {
+                "disciplina": "PEND",
+                "turma": "2IDS-SC_A",
+                "sala": "324",
+                "_info": "Professor Wesley: Aula de PEND, para a turma 2IDS-SC_A, na sala 324 na sexta-feira no período da tarde (aula 2 do dia) - disciplina ainda não definida"
+            }
+        ]
+    },
+    "noite": {
+        "_descricao": "Aulas do período da noite (geralmente das 18h30 às 22h55)",
+        "_info": "O professor Fabiana não tem aulas no período da noite"
+    }
+}

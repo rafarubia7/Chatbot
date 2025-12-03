@@ -1,0 +1,286 @@
+{
+    "_metadata": {
+        "tipo": "horario_sala",
+        "sala": "315",
+        "descricao": "Horário completo da sala 315 com todas as aulas, professores e turmas por dia da semana e período",
+        "periodos": [
+            "manhã",
+            "tarde",
+            "noite"
+        ],
+        "dias_semana": [
+            "segunda",
+            "terça",
+            "quarta",
+            "quinta",
+            "sexta",
+            "sábado"
+        ]
+    },
+    "_instrucoes": {
+        "uso": "Este arquivo contém o horário completo da sala 315. Use para responder perguntas como: 'quem vai dar aula na sala 315 hoje?', 'qual professor está na sala 315?', 'a sala 315 está ocupada?'",
+        "estrutura": "Os horários estão organizados por período (manhã/tarde/noite) e depois por dia da semana. Cada aula contém: disciplina (nome da matéria), professor (nome do professor) e turma (nome da turma quando disponível)"
+    },
+    "manhã": {
+        "_descricao": "Aulas do período da manhã (geralmente das 8h às 12h)",
+        "segunda": [
+            {
+                "disciplina": "COMEC1",
+                "professor": "Jorge",
+                "sala": "315",
+                "_info": "Aula de COMEC1, com o professor Jorge na sala 315 na segunda-feira no período da manhã"
+            },
+            {
+                "disciplina": "1MADM-FABER",
+                "professor": "Jorge",
+                "sala": "315",
+                "_info": "Aula de 1MADM-FABER, com o professor Jorge na sala 315 na segunda-feira no período da manhã (aula 2 do dia)"
+            },
+            {
+                "disciplina": "1MADM-FABER",
+                "professor": "Jorge",
+                "sala": "315",
+                "_info": "Aula de 1MADM-FABER, com o professor Jorge na sala 315 na segunda-feira no período da manhã (aula 3 do dia)"
+            }
+        ],
+        "terça": [
+            {
+                "disciplina": "COMEC1",
+                "professor": "Jorge",
+                "sala": "315",
+                "_info": "Aula de COMEC1, com o professor Jorge na sala 315 na terça-feira no período da manhã"
+            },
+            {
+                "disciplina": "1MADM-FABER",
+                "professor": "Jorge",
+                "sala": "315",
+                "_info": "Aula de 1MADM-FABER, com o professor Jorge na sala 315 na terça-feira no período da manhã (aula 2 do dia)"
+            },
+            {
+                "disciplina": "1MADM-FABER",
+                "professor": "Jorge",
+                "sala": "315",
+                "_info": "Aula de 1MADM-FABER, com o professor Jorge na sala 315 na terça-feira no período da manhã (aula 3 do dia)"
+            }
+        ],
+        "quarta": [],
+        "quinta": [
+            {
+                "disciplina": "M2EME-B",
+                "professor": "Murilo",
+                "sala": "315",
+                "_info": "Aula de M2EME-B, com o professor Murilo na sala 315 na quinta-feira no período da manhã"
+            },
+            {
+                "disciplina": "CMU2",
+                "professor": "Murilo",
+                "sala": "315",
+                "_info": "Aula de CMU2, com o professor Murilo na sala 315 na quinta-feira no período da manhã (aula 2 do dia)"
+            },
+            {
+                "disciplina": "M2EME-B",
+                "professor": "João",
+                "sala": "315",
+                "_info": "Aula de M2EME-B, com o professor João na sala 315 na quinta-feira no período da manhã (aula 3 do dia)"
+            },
+            {
+                "disciplina": "DET2",
+                "professor": "João",
+                "sala": "315",
+                "_info": "Aula de DET2, com o professor João na sala 315 na quinta-feira no período da manhã (aula 4 do dia)"
+            }
+        ],
+        "sexta": [],
+        "sábado": [
+            {
+                "disciplina": "FIC",
+                "professor": "Rafael Sel",
+                "sala": "315",
+                "_info": "Aula de FIC, com o professor Rafael Sel na sala 315 na sábado no período da manhã"
+            },
+            {
+                "disciplina": "FIC",
+                "professor": "Baldo",
+                "sala": "315",
+                "_info": "Aula de FIC, com o professor Baldo na sala 315 na sábado no período da manhã (aula 2 do dia)"
+            }
+        ]
+    },
+    "tarde": {
+        "_descricao": "Aulas do período da tarde (geralmente das 13h30 às 17h)",
+        "segunda": [
+            {
+                "disciplina": "PMEC",
+                "professor": "Matheus",
+                "sala": "315",
+                "_info": "Aula de PMEC, com o professor Matheus na sala 315 na segunda-feira no período da tarde"
+            },
+            {
+                "disciplina": "1IMEC-B-A",
+                "professor": "Matheus",
+                "sala": "315",
+                "_info": "Aula de 1IMEC-B-A, com o professor Matheus na sala 315 na segunda-feira no período da tarde (aula 2 do dia)"
+            },
+            {
+                "disciplina": "1IMEC-B-A",
+                "professor": "Matheus",
+                "sala": "315",
+                "_info": "Aula de 1IMEC-B-A, com o professor Matheus na sala 315 na segunda-feira no período da tarde (aula 3 do dia)"
+            }
+        ],
+        "terça": [
+            {
+                "disciplina": "PMEC",
+                "professor": "Matheus",
+                "sala": "315",
+                "_info": "Aula de PMEC, com o professor Matheus na sala 315 na terça-feira no período da tarde"
+            },
+            {
+                "disciplina": "1IMEC-C-A",
+                "professor": "Matheus",
+                "sala": "315",
+                "_info": "Aula de 1IMEC-C-A, com o professor Matheus na sala 315 na terça-feira no período da tarde (aula 2 do dia)"
+            },
+            {
+                "disciplina": "1IMEC-C-A",
+                "professor": "Matheus",
+                "sala": "315",
+                "_info": "Aula de 1IMEC-C-A, com o professor Matheus na sala 315 na terça-feira no período da tarde (aula 3 do dia)"
+            }
+        ],
+        "quarta": [],
+        "quinta": [
+            {
+                "disciplina": "T2ALP-ELECT",
+                "professor": "Rafael Zor",
+                "sala": "315",
+                "_info": "Aula de T2ALP-ELECT, com o professor Rafael Zor na sala 315 na quinta-feira no período da tarde (11h50-15h50)"
+            },
+            {
+                "disciplina": "DESRE",
+                "professor": "Rafael Zor",
+                "sala": "315",
+                "_info": "Aula de DESRE, com o professor Rafael Zor na sala 315 na quinta-feira no período da tarde (aula 2 do dia)"
+            }
+        ],
+        "sexta": [
+            {
+                "disciplina": "PBE1",
+                "professor": "Paulo Car",
+                "sala": "315",
+                "_info": "Aula de PBE1, com o professor Paulo Car na sala 315 na sexta-feira no período da tarde"
+            },
+            {
+                "disciplina": "1IDS-SC_B",
+                "professor": "Paulo Car",
+                "sala": "315",
+                "_info": "Aula de 1IDS-SC_B, com o professor Paulo Car na sala 315 na sexta-feira no período da tarde (aula 2 do dia)"
+            },
+            {
+                "disciplina": "1IDS-SC_B",
+                "professor": "Paulo Car",
+                "sala": "315",
+                "_info": "Aula de 1IDS-SC_B, com o professor Paulo Car na sala 315 na sexta-feira no período da tarde (aula 3 do dia)"
+            }
+        ],
+        "sábado": [
+            {
+                "disciplina": "FIC",
+                "professor": "Rafael Sel",
+                "sala": "315",
+                "_info": "Aula de FIC, com o professor Rafael Sel na sala 315 na sábado no período da tarde"
+            },
+            {
+                "disciplina": "FIC",
+                "professor": "Baldo",
+                "sala": "315",
+                "_info": "Aula de FIC, com o professor Baldo na sala 315 na sábado no período da tarde (aula 2 do dia)"
+            }
+        ]
+    },
+    "noite": {
+        "_descricao": "Aulas do período da noite (geralmente das 18h30 às 22h55)",
+        "segunda": [
+            {
+                "disciplina": "GEM",
+                "professor": "Tony",
+                "sala": "315",
+                "_info": "Aula de GEM, com o professor Tony na sala 315 na segunda-feira no período da noite"
+            },
+            {
+                "disciplina": "CST MEI-6A/CST MEI-6B",
+                "professor": "Tony",
+                "sala": "315",
+                "_info": "Aula de CST MEI-6A/CST MEI-6B, com o professor Tony na sala 315 na segunda-feira no período da noite (aula 2 do dia)"
+            },
+            {
+                "disciplina": "CST MEI-6A/CST MEI-6B",
+                "professor": "Tony",
+                "sala": "315",
+                "_info": "Aula de CST MEI-6A/CST MEI-6B, com o professor Tony na sala 315 na segunda-feira no período da noite (aula 3 do dia)"
+            },
+            {
+                "disciplina": "ATIEX",
+                "professor": "",
+                "sala": "315",
+                "_info": "Aula de ATIEX na sala 315 na segunda-feira no período da noite (aula 4 do dia)"
+            }
+        ],
+        "terça": [
+            {
+                "disciplina": "PROC SELETIVO",
+                "professor": "",
+                "sala": "315",
+                "_info": "Aula de PROC SELETIVO na sala 315 na terça-feira no período da noite"
+            },
+            {
+                "disciplina": "PROCESSO SELETIVO CST",
+                "professor": "",
+                "sala": "315",
+                "_info": "Aula de PROCESSO SELETIVO CST na sala 315 na terça-feira no período da noite (aula 2 do dia)"
+            }
+        ],
+        "quarta": [
+            {
+                "disciplina": "CST MEI-4A/CST MEI-4B",
+                "professor": "Antonio",
+                "sala": "315",
+                "_info": "Aula de CST MEI-4A/CST MEI-4B, com o professor Antonio na sala 315 na quarta-feira no período da noite"
+            },
+            {
+                "disciplina": "GEM",
+                "professor": "Antonio",
+                "sala": "315",
+                "_info": "Aula de GEM, com o professor Antonio na sala 315 na quarta-feira no período da noite (aula 2 do dia)"
+            },
+            {
+                "disciplina": "CST MEI-4A/CST MEI-4B",
+                "professor": "Antonio",
+                "sala": "315",
+                "_info": "Aula de CST MEI-4A/CST MEI-4B, com o professor Antonio na sala 315 na quarta-feira no período da noite (aula 3 do dia)"
+            },
+            {
+                "disciplina": "PINT4",
+                "professor": "Antonio",
+                "sala": "315",
+                "_info": "Aula de PINT4, com o professor Antonio na sala 315 na quarta-feira no período da noite (aula 4 do dia)"
+            }
+        ],
+        "quinta": [
+            {
+                "disciplina": "ISCF",
+                "professor": "",
+                "sala": "315",
+                "_info": "Aula de ISCF na sala 315 na quinta-feira no período da noite"
+            },
+            {
+                "disciplina": "CST MEI-6A/CST MEI-6B",
+                "professor": "Paulo José",
+                "sala": "315",
+                "_info": "Aula de CST MEI-6A/CST MEI-6B, com o professor Paulo José na sala 315 na quinta-feira no período da noite (aula 2 do dia)"
+            }
+        ],
+        "sexta": [],
+        "sábado": []
+    }
+}

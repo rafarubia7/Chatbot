@@ -1,0 +1,140 @@
+{
+    "_metadata": {
+        "tipo": "horario_professor",
+        "professor": "Paulo Car",
+        "descricao": "Horário completo do professor Paulo Car com todas as aulas, turmas e salas por dia da semana e período",
+        "periodos": [
+            "manhã",
+            "tarde",
+            "noite"
+        ],
+        "dias_semana": [
+            "segunda",
+            "terça",
+            "quarta",
+            "quinta",
+            "sexta",
+            "sábado"
+        ]
+    },
+    "_instrucoes": {
+        "uso": "Este arquivo contém o horário completo do professor Paulo Car. Use para responder perguntas como: 'onde está o professor Paulo Car?', 'qual sala o professor Paulo Car está?', 'o professor Paulo Car está dando aula hoje?'",
+        "estrutura": "Os horários estão organizados por período (manhã/tarde/noite) e depois por dia da semana. Cada aula contém: disciplina (nome da matéria), turma (nome da turma) e sala (número da sala onde a aula acontece)"
+    },
+    "manhã": {
+        "_descricao": "Aulas do período da manhã (geralmente das 8h às 12h)",
+        "segunda": [
+            {
+                "disciplina": "PBE1",
+                "turma": "1IDS-SC_A",
+                "sala": "319",
+                "_info": "Professor Paulo Car: Aula de PBE1, para a turma 1IDS-SC_A, na sala 319 na segunda-feira no período da manhã"
+            },
+            {
+                "disciplina": "PBE1",
+                "turma": "1IDS-SC_A",
+                "sala": "319",
+                "_info": "Professor Paulo Car: Aula de PBE1, para a turma 1IDS-SC_A, na sala 319 na segunda-feira no período da manhã (aula 2 do dia)"
+            }
+        ],
+        "quarta": [
+            {
+                "disciplina": "TSOFT",
+                "turma": "2IDS-SC_A",
+                "sala": "321",
+                "_info": "Professor Paulo Car: Aula de TSOFT, para a turma 2IDS-SC_A, na sala 321 na quarta-feira no período da manhã"
+            },
+            {
+                "disciplina": "PPDM",
+                "turma": "2IDS-SC_A",
+                "sala": "321",
+                "_info": "Professor Paulo Car: Aula de PPDM, para a turma 2IDS-SC_A, na sala 321 na quarta-feira no período da manhã (aula 2 do dia)"
+            }
+        ],
+        "sexta": [
+            {
+                "disciplina": "PBE1",
+                "turma": "1IDS-SC_A",
+                "sala": "319",
+                "_info": "Professor Paulo Car: Aula de PBE1, para a turma 1IDS-SC_A, na sala 319 na sexta-feira no período da manhã"
+            }
+        ]
+    },
+    "tarde": {
+        "_descricao": "Aulas do período da tarde (geralmente das 13h30 às 18h)",
+        "segunda": [
+            {
+                "disciplina": "PEND2",
+                "turma": "3TDS-B",
+                "sala": "319",
+                "_info": "Professor Paulo Car: Aula de PEND2, para a turma 3TDS-B, na sala 319 na segunda-feira no período da tarde - disciplina ainda não definida"
+            },
+            {
+                "disciplina": "PBE1",
+                "turma": "1IDS-SC_B",
+                "sala": "321",
+                "_info": "Professor Paulo Car: Aula de PBE1, para a turma 1IDS-SC_B, na sala 321 na segunda-feira no período da tarde (aula 2 do dia)"
+            }
+        ],
+        "terça": [
+            {
+                "disciplina": "PPDM",
+                "turma": "3TDS-B",
+                "sala": "319",
+                "_info": "Professor Paulo Car: Aula de PPDM, para a turma 3TDS-B, na sala 319 na terça-feira no período da tarde"
+            },
+            {
+                "disciplina": "PPDM",
+                "turma": "3TDS-B",
+                "sala": "319",
+                "_info": "Professor Paulo Car: Aula de PPDM, para a turma 3TDS-B, na sala 319 na terça-feira no período da tarde (aula 2 do dia)"
+            }
+        ],
+        "quarta": [
+            {
+                "disciplina": "TSOFT",
+                "turma": "2IDS-SC_B",
+                "sala": "321",
+                "_info": "Professor Paulo Car: Aula de TSOFT, para a turma 2IDS-SC_B, na sala 321 na quarta-feira no período da tarde"
+            },
+            {
+                "disciplina": "PPDM",
+                "turma": "2IDS-SC_B",
+                "sala": "321",
+                "_info": "Professor Paulo Car: Aula de PPDM, para a turma 2IDS-SC_B, na sala 321 na quarta-feira no período da tarde (aula 2 do dia)"
+            }
+        ],
+        "quinta": [
+            {
+                "disciplina": "PPDM",
+                "turma": "3TDS-B",
+                "sala": "322",
+                "_info": "Professor Paulo Car: Aula de PPDM, para a turma 3TDS-B, na sala 322 na quinta-feira no período da tarde"
+            },
+            {
+                "disciplina": "PEND2",
+                "turma": "3TDS-B",
+                "sala": "322",
+                "_info": "Professor Paulo Car: Aula de PEND2, para a turma 3TDS-B, na sala 322 na quinta-feira no período da tarde (aula 2 do dia) - disciplina ainda não definida"
+            }
+        ],
+        "sexta": [
+            {
+                "disciplina": "PBE1",
+                "turma": "1IDS-SC_B",
+                "sala": "315",
+                "_info": "Professor Paulo Car: Aula de PBE1, para a turma 1IDS-SC_B, na sala 315 na sexta-feira no período da tarde"
+            },
+            {
+                "disciplina": "PBE1",
+                "turma": "1IDS-SC_B",
+                "sala": "315",
+                "_info": "Professor Paulo Car: Aula de PBE1, para a turma 1IDS-SC_B, na sala 315 na sexta-feira no período da tarde (aula 2 do dia)"
+            }
+        ]
+    },
+    "noite": {
+        "_descricao": "Aulas do período da noite (geralmente das 18h30 às 22h55)",
+        "_info": "O professor Fabiana não tem aulas no período da noite"
+    }
+}
